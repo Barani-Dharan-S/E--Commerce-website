@@ -29,9 +29,9 @@
     return (
       <div className="d-flex align-items-center justify-content-start mt-1">
                 <h6 className="font-weight-bold my-2" style={{marginRight: 20}}>{props.price + "$"}</h6>
-                <Button eventHandler={decrementProductCount}>-</Button>
+                <Button eventHandler={decrementProductCount} disable={productCount == 0}>-</Button>
                 <span style={ style }>{productCountFormat()}</span>
-                <Button eventHandler={incrementProductCount}>+</Button>
+                <Button eventHandler={incrementProductCount} disable={productCount >= props.stock}>+</Button>
                 <span className={ badge }>{props.status ? 'Available' : 'Unavailable'}</span>
       </div>
     )
