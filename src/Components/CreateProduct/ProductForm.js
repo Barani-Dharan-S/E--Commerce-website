@@ -72,6 +72,7 @@ function createProductEventHandler(event){
     updatedImage('');
 
     props.createProduct(product);
+    props.onCancel();
     //console.log(product);
 }
 
@@ -121,6 +122,7 @@ function createProductEventHandler(event){
         
 
         <button type="submit" className="btn btn-primary">Add Product</button>
+        <button type="button" onClick={props.onCancel}>Cancel</button>
     </form>
   </div>);
 }
